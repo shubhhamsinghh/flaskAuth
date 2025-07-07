@@ -1,0 +1,281 @@
+
+
+@media screen and (max-width:200px){
+.search_con,.populal_main,.falg_div{display: none;}
+.searc_bg{padding: 0 10px;}
+.search_main{width:100%;margin: 50px 0px;}
+.trust_container div> ul li img{max-width:100%;}	
+.origin_con_mob input,.desti_con_mob input,.calden_right_mob input,.calden_left_mob input{ font-size: 30px;}	
+	.search_div button{ font-size: 30px;}
+	.trust_container ul li{width: 25%;padding: 0 6px;}
+	.flight_menu{margin: 6px 0 0 0;}
+	.search_menu ul{margin:-24px 0 0 14px;}
+	.flight{margin-right: 41px;}
+	.search_menu ul li a{line-height:32px;padding: 0px 34px;font-size: 15px; height:32px;}
+	.flight_menu ul li label{margin-left: 3px;}
+	.main_menu{width:15%;float: right;padding-right:0px; margin-top:0;}
+	.main_menu ul li a:before{
+    content: '|';
+    color: #ccc;
+    display:none;
+	padding: 0 15px;}
+	.logo a img{width: 100%;}
+	.contact_con a{font-size: 17px;}
+    .top_headerright a img{width:15%;}
+	#mainnav #menu {display: block;}
+	#menu i{font-size: 30px;}
+    #mainnav ul {display: none;background: #fff;padding: 6px;position: absolute;z-index: 9;right: -20px;width: 200px;top: 50px;box-shadow: 2px 2px 2px #ccc;}
+    #mainnav ul li {display: block;border-bottom: 1px dashed #ccc;width: 100%;float: left;}
+    #mainnav ul li a {display: block;padding: .75em 1.5em .5em 1.5em;}
+	.head_con{ padding:0px;}
+	.logo{width:60%;padding-left:0; padding-bottom:5px;}
+	.header_right{width:40%;}
+    .mod_header{ display:block;}
+	.contact_con{width: 70%; padding-left:0px; display:none;}
+	.offer_con h1{ font-size:24px;}
+	.why_con,.offer_div{ margin-bottom: 15px;}
+	.modify_right{width: 35%;float: right;text-align: right;  display:none;}
+    .modify_rightfilter{width: 35%;float: right;text-align: right;  display:none;}
+	.modify_con{padding:0px;position:relative; margin-bottom:0px;}
+	.destinatin_div{padding: 4px 0px;}
+	.smart_check{width: 15%;}
+    .tpsmall_con{ display:none;}
+	.from_to{width:60%; padding:0;}
+    .modi_pase span{ font-size:13px;}
+    .modify_left{width:100%;}
+	.from_to span{ font-size: 14px;}
+    .modi_date span{ font-size:14px;}
+	.modi_date{ padding: 0;}
+	.modi_pase{ padding: 3px;}
+	.resul_deatil{ padding:6px;}
+    .outbond_icon{ padding:0;}
+    .outbond_topL img{ width:30%;}
+	.result_main{ padding: 0 10px; margin:0px;}
+	.result_left{width: 100%; margin-right: 0;}
+	.contact_result{width: 65%; display:none;}
+    .package_con{width:50%;}
+    .layover_con p{left: 18%;}
+	.modifyleft_one,.modify_calendr,.modify_passenger,.modify_btn{width: 100%;}
+	.modify_button{ text-align:center;}
+	.repon_filter{display: block;width:100%; float:left; margin:0px;}	
+    .repon_filter .filter_click{background: linear-gradient(to right,#e83819,#f3850b); float:left;}
+    .repon_filter .modify_click{background: linear-gradient(to right,#e83819,#f3850b); float:right;}
+	.reslt_right {width: 100%;}
+    .price_one,.price_two,.price_third{width:100%;}
+    .para_content{ padding:5px;}
+	.slider_logo p{width:100%; float: left; text-align: center;}
+	.outbond_icon img{width:80%!important;}
+	.airlines_slide_left{width:40%;}
+	.airlines_slide_right{width: 60%; float: left;}
+	.owl-prev,.owl-next{display: none;}
+	.passen_left_mob> p{ font-size: 13px;padding-right: 6px;}
+	.filtor_top, .seclect_airline{margin-top: 20px;}
+	.result_left{display: none;}
+	.common_content{padding:0px;}
+	.desti_mid img,.calden_mid img {width: 50%; padding-top: 30px;}
+	.from_wherediv,.to_wherediv,.passenger_mob,.airclass_popupmob{ z-index: 9999;position: fixed; overflow: hidden;height: 100vh; top: 0;left: 0; background: #fff;    width: 100%; padding: 15px;display:none;}
+	.mob_input{box-shadow: 0 0 15px 2px rgb(0 0 0 / 15%);margin: 0 0 15px; height: 45px;    padding: 10px 15px!important;}
+	.from_header{position: relative;}
+	.from_header h3{ font-size: 16px; color: #000;margin: 0 0 15px 0;}
+	.from_header a{position: absolute; right: 6px; font-size:20px;color: #000;top: -7px;text-decoration: none;}
+	.flight_time_con{padding-bottom:10px;}
+	.top_cut{left: -69px;top: 39px;z-index: -1;}
+    .flight_menu ul li{margin-right: 5px;}
+    .why_con h4{ font-size:11px; padding:5px;}
+    .why_con img{width:30%;}
+    .top_headerright{ font-size:15px;}
+	.listing_left{width: 100%;}
+	.mobresult_btn{width: 100%; float: left; padding: 6px 0;}
+	.mobr_right{float: left;width:50%;}
+	.mobl_btn{float: left;width: 50%;text-align: right;}
+	.mobr_right h5{font-size: 28px;font-weight: bold;color: #ff0e00;}
+	.destination_code span{margin-top: 4px;display: inline-block;}
+	.flight_icon{ margin-top: 4px;}
+	.mob_time{display: block; font-size:14px;}
+	.listing_right,.flight_time_one,.flight_time_third, .ailines_detail p{display:none!important;}
+	.mobl_btn a{background: linear-gradient(to right,#e83819,#f3850b);border: none;color: #fff;
+    font-size: 20px;padding: 5px 25px;border-radius: 20px;font-weight: bold; display: inline-block;}
+	.flight_time_two{width:25%;}
+	.destination_code{width:30%;}
+	.resultbook_left{width: 100%;padding:0px 25px;}
+	.origin_con input,.desti_con input{ font-size:30px;}
+    .city_span{overflow-x: hidden;}
+    .mobile_book{background: linear-gradient(to right,#e83819,#f3850b); border: none;color: #fff;font-size: 15px!important;
+    padding:6px 14px;border-radius: 20px;font-weight: bold;margin:4px 0;display: inline-block; display:block; float:right;width:30%;text-align: center;}
+    .outbond_four .outbond_eco{ padding:0;}
+    .outbond_four .eco_time{padding:0;}
+    .outbond_four{ padding-left:3px;}
+    .outbond_one,.outbond_two,.outbond_third{line-break:auto;}
+    .view_result{ float:left;width:70%; padding:5px 0;text-align:left;}
+    .imag_content{top: 20px;}
+    .imag_content h4{font-size:14px;}
+    .hotel_text{width:100%; font-size:12px!important;}
+    .imag_content p{ font-size:13px;}
+    .imag_content p b{font-size:16px;}
+    .footer_con{ padding:10px;}
+    .footer_company h6{ font-size:16px;}
+    .footer_company,.footer_destination{ margin-bottom:20px;}
+    .footer_destination h6,.footer_touch h6{margin-bottom: 15px;font-size:16px;}
+    .newslatter button{left:98px;padding: 6px 10px; font-size:14px;}
+    .passenger_left{width:100%;margin:0;padding:10px; }
+    .passenger_right{ width:100%; padding:0 10px;}
+    .card_accept img{width:100%;}
+    .passenger_main{ padding:0 10px;}
+    .passenger_nam{width: 32%;}
+    .passenger_gender{width: 37%; padding:0;}
+    .passenger_birth{width: 62%;}
+    .wid50{ width:100%;}
+    .passen_left> p, .passen_right p{ font-size:15px;}
+    .payment_info ul li{ width:50%;}
+.payment_info ul li a{ margin:0; padding:8px 6px;}
+.card-details{width:100%;}
+.pay_page_card{width: 52%;}
+.card_expire_date{width: 45%; margin:0;}
+.pay_page_cvv{width: 42%;}
+.pay_page_name{width: 55%;}
+.contactinfo_left,.contactinfo_left> select,.contactinfo_right,.contactinfo_left> input,.contactinfo_right> input{ width:100%;}
+.contactinfo_right> select{width:100%!important;}
+.contactinfo_left label,.contactinfo_right label{ width:100%;}
+.contactinfo_right label{ text-align:left;}
+.why_con{ height:100px; padding:5px;}
+.why_para,.offer_con{ display:none;}
+.logo a{ padding:5px 10px 10px 10px;}
+.MobileSearchAutoComplete{position: fixed;z-index: 99;top:-10px;left: 0px;width: 100%;height: 110vh;background: #fff;padding: 10px;}
+.MobileSearchAutoComplete .origin_con,.MobileSearchAutoComplete .modify_from{width:100%; padding-bottom:30px;}
+.MobileSearchAutoComplete .desti_con,.MobileSearchAutoComplete .modify_to{width:100%;}
+.MobileSearchAutoComplete .desti_mid,.MobileSearchAutoComplete .modify_mid{display:none;}
+.destop_con .mobile_cross {display: none; position: fixed;left: 325px;color: #000;border: 1px solid #000;border-radius: 50%;padding: 2px 5px;top: 17px;z-index: 999;}
+.destop_con.mobile_cross i{color:#000; font-size:15px;}
+.MobileSearchAutoComplete h4{ display:block; font-size:20px; color:#000;padding:15px 0; font-weight:bold;margin-bottom: 20px;}
+.MobileSearchAutoComplete .city_orgin,.MobileSearchAutoComplete .modify_orgin{ display:none;}
+.MobileSearchAutoComplete .city_span,.MobileSearchAutoComplete .modify_span{ display:none;}
+.MobileSearchAutoComplete input{ padding: 8px 26px 7px 20px;font-size: 16px;box-shadow: 0 0 15px 2px rgb(0 0 0 / 15%);border-radius: 5px;margin: 0 0 15px;outline: 0;position: relative;z-index: 100;border: 1px solid #d6d6d6;
+    -webkit-appearance: none; white-space: nowrap; overflow: hidden;text-overflow: ellipsis;box-sizing: border-box;}
+.MobileSearchAutoComplete .error_mesg{display:none;} 
+.MobileSearchAutoComplete .modify_calmob{ margin-top:20px;}
+.MobileSearchAutoComplete .modify_depart{display:none;}
+.MobileSearchAutoComplete .modify_calspan{ display:none;}
+.MobileSearchAutoComplete .modify_cal_mid{margin-top: 10px;}
+#ui-datepicker-div{width:100%!important; left:120px!important;overflow-y: scroll;overflow-x: hidden;top: 110px!important; max-height:600px;}
+.ui-datepicker-multi .ui-datepicker-group{width: 100%;padding: 10px;}
+.modify_destination .mobile_cross{display: none; position: fixed;left: 325px;color: #000;border: 1px solid #000;border-radius: 50%;padding: 2px 5px;top: 17px;z-index: 999;}
+.ui-helper-hidden-accessible{ display:none;}
+.ui-menu ui-widget ui-widget-content ui-autocomplete ui-front{background: #fff;border-radius: 12px;padding: 0;overflow: hidden;box-shadow: 0 10px 32px #999;width:400px; display:block!important; position:absolute;}
+
+.payment_info ul li{ margin:0;}
+.passenger-div { display: none;border-radius:0px;position: fixed;height:100vh!important;width:100%;top: 0px;left:0px;margin-left: 0;z-index: 9;background-color: #fff; }
+.airclass_popup{display: none;border-radius:0px;position: fixed;height:100vh!important;width:100%;top: 0px;left:0px;margin-left: 0;z-index: 9;background-color: #fff;}
+.passenger_con h4, .airclass_popup h4{display:block;background: linear-gradient(to right,#e83819,#f3850b); text-align:center; text-transform:uppercase; font-size:20px;width:100%; padding:6px;color:#fff;}
+.modify_passenger h4, .airclass_popup h4{display:block;background: linear-gradient(to right,#e83819,#f3850b); text-align:center; text-transform:uppercase; font-size:20px;width:100%; padding:6px;color:#fff;}
+.classtpe_main{ margin-top:20px;}
+.modify_menu{ margin-bottom:15px;}
+.modify_menu label > input[type="radio"] + *::before{top:-5px;}
+.modify_search{top: 0; background:#fff;z-index:99;overflow:auto;left: 0;height: 100vh;overflow-y: hidden;position:fixed;border-radius:0px;}
+.deal_section:first-child {width: 28.3%;}
+.deal_section {width: 27%;}
+.scrool_top span{padding: 24.5px 4px;font-size: 15px;}
+.confirmation_con{ padding:0 10px;}
+.confirm_left{width:100%; margin-bottom:10px;}
+.confirm_right{width:100%; border-radius:15px;}
+.deal_section h5{overflow:hidden;}
+.about_mob{ display:block;}
+.about_dest{display:none;}
+.about_small{margin:10px 0 10px 0;}
+.search_bg h1{padding-top:10px;    font-size: 20px; }
+.sub_con{ display:block;width:10%;} 
+.about_small img {width: 70%;}
+ .cooki_contop{ display:block; }
+
+.booking_search {width: 100%; margin-bottom: 30px;}
+.payment_info ul li a img{margin-right: 2px;display:none;}
+.main_footer2{ padding:10px;}
+.SessionTimeOut .sessionbox{width:340px!important;}
+.fnpl_img{ display:none;}
+.refundHead h3,.refundHead em{padding:0px;}
+.covid_text{ font-size:15px!important;}
+.divBookingTypeAmt ul li{white-space: nowrap; overflow: hidden;text-overflow: ellipsis; width:25%;}
+.divBookingTypeAmt ul li:nth-child(4n+2){ padding:0;}
+.divBookingTypeAmt ul li:nth-child(4n+3){ padding:0;}
+.divBookingTypeCnf ul li{white-space: nowrap; overflow: hidden;text-overflow: ellipsis;}
+.conf_mail_img img{width:100%;}
+}
+
+
+@media (min-width: 768px) and (max-width: 991px){
+	.top_cut{ top:47px;left:-86px;z-index:-1;}
+    .head_con{ padding:5px 0;}
+    .logo{width: 30%}
+    .header_right{width:70%;}	
+    .search_con{width: 45%;}
+    .search_con ul li{margin-right: 10px;}
+	.main_menu{ display:none;}
+    .newslatter button{padding: 6px 6px;left: 85px;}
+    .search_con ul{padding-right: 15px;}
+    .contact_con{width:53%;}
+    .trust_container img{width:100%;}
+    .populal_main ul li{width:98%;}
+    .airport,.aeroplane,.return{ padding-left:40px; padding-right:40px;}
+    #ui-datepicker-div{    width: 55%!important;}
+    .filter_flight_time li{margin-right: 8px;}
+    .filter_call a{font-size: 17px;}
+    .passenger_left{width: 73%;margin-right: 15px;}
+    .passenger_right{width: 24%;}
+    .passenger_main{padding:10px;}
+    .fixed-right {position: fixed;right:5px;top: 98px;}
+
+.price_head label{ font-size:16px;}
+.coupon_sec> input{width:60%;}
+.apply_code{ margin:0; padding:5px 10px;}
+.contact_result{width:60%;}
+.coupn-section h4{ font-size:12px;}
+.coupn-section h4 em{ font-size:13px;}
+.coupn-section p{ padding:0;}
+.menu-toggler, .side-menu-close, .user-menu-open {display: block;color: #fff;/* top: 44px; */}
+}
+
+@media (min-width: 992px) and (max-width: 1200px){
+.top_cut{    top: 44px;}	
+.passenger_right{ width:25%;}
+.fixed-right {position: fixed;right:8px;top: 98px;}
+.menu-toggler, .side-menu-close, .user-menu-open {display: block;color: #fff;/* top: 44px; */}
+
+	}
+		
+@media (min-width:1025px){
+ /*.fixed-right {position: fixed;right:49px;top: 98px;}*/
+.fixed-right {   position:fixed;   right:9px; max-width:300px;   top:98px;}
+.menu-toggler, .side-menu-close, .user-menu-open {display: block;color: #fff;/* top: 44px; */}
+}		
+@media (min-width:1281px){
+ .fixed-right {position: fixed; right: 67px; max-width:300px; top: 98px;}
+ .menu-toggler, .side-menu-close, .user-menu-open {display: block;color: #fff;/* top: 44px; */}
+}	
+@media (min-width:1920px){
+ .fixed-right {position: fixed; right:351px; max-width:300px; top: 98px;}
+ .menu-toggler, .side-menu-close, .user-menu-open {display: block;color: #fff;/* top: 44px; */}
+}	
+.ui-datepicker .ui-datepicker-title{line-height: 2.6em;text-align: center; font-size: 14px;}
+#ui-datepicker-div,.ui-datepicker ui-widget ui-widget-content ui-helper-clearfix ui-corner-all ui-datepicker-multi-2 ui-datepicker-multi{width:50%!important;}
+.ui-datepicker-multi-2 .ui-datepicker-group{width:40%;height:350px;}
+@media screen and (max-width:991px){
+.ui-datepicker-multi-2 .ui-datepicker-group{width:138%;}
+}
+.ui-datepicker td{font-size: 15px;}
+.ui-datepicker td span, .ui-datepicker td a{ padding:8px;}
+.ui-datepicker th{color:#ffa903;font-size: 14px;}
+.ui-state-active, .ui-widget-content .ui-state-active, .ui-widget-header .ui-state-active, a.ui-button:active, .ui-button:active, .ui-button.ui-state-active:hover{background:#ffa903; color:#fff;}
+.ui-menu ui-widget ui-widget-content ui-autocomplete ui-front{background: #fff;border-radius: 12px;padding: 0;overflow: hidden;box-shadow: 0 10px 32px #999;width:400px; display:block; position:absolute;}
+a.ui-datepicker-next.ui-corner-all {background: #fff url(../../public/images/arrow-right-1.png) no-repeat !important;background-position: center center !important;width: 30px;height: 30px;transform: rotate(0deg);}
+a.ui-datepicker-prev.ui-corner-all {background: #fff url(../../public/images/arrow-left-1.png) no-repeat !important;background-position: center center !important;width: 30px;height: 30px;}
+.ui-datepicker-multi-2 .ui-datepicker-group{border-radius: 15px;padding: 15px;background-color:white}
+#ui-datepicker-div{ border-radius:15px;    box-shadow: 0 10px 30px #333;}
+
+@media screen and (min-width:50px) and (max-width:350px){
+.ui-datepicker .ui-datepicker-title{line-height: 2.6em;text-align: center; font-size: 10px;}
+#ui-datepicker-div,.ui-datepicker ui-widget ui-widget-content ui-helper-clearfix ui-corner-all ui-datepicker-multi-2 ui-datepicker-multi{width:50%!important;}
+.ui-datepicker-multi-2 .ui-datepicker-group{width:30%;}
+.ui-datepicker td{font-size: 10px;}
+.ui-datepicker td span, .ui-datepicker td a{ padding:8px;}
+.ui-datepicker th{color:#ffa903;font-size: 10px;}
+.ui-datepicker th{color:#ffa903;font-size: 10px;}
+}
