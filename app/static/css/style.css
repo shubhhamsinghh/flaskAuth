@@ -4457,22 +4457,5 @@ a.blogpost {
     padding: 13px 20px !important;
 }
 
-.badge{
-    padding: 5px 10px;
-    border-radius: 4px;
-    font-weight: bold;
-    color: white;
-}
 
-.badge.pending{
-    background-color: #ffc107;
-}
-
-.badge.working{
-    background-color: #17a2b8;
-}
-
-.badge.done{
-    background-color: #28a745;
-}
 
