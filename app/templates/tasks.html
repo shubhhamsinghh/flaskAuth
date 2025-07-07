@@ -14,17 +14,18 @@
                                         </div>
                                         <div class="actions">
                                             <div class="btn-group">
+                                                <a class="btn btn-primary float-right" data-toggle="modal" role="button" data-target="#add_task"><i class="fa fa-plus"></i> Add Task</a>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="portlet-body">
 								
-								<div class="show_panel">
+								<!-- <div class="show_panel">
 								<div class="alert alert-success">
 								<button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
 								<font size="3"></font>
-								</div></div>
-								
+								</div>
+                                </div> -->
                                         <table id="example" class="display cell-border" cellspacing="0" width="100%">
                                             <thead>
                                                 <tr>
@@ -42,11 +43,10 @@
 													<td>{{task.title}}</td>
                                                     <td><span class="badge {{task.status|lower}}">{{task.status}}</span></td>
                                                     <td><form action="{{url_for('tasks.toggle_status', task_id=task.id)}}" method="post">
-                                                        <button type="submit" class="btn-small">Next</button>
+                                                        <button type="submit" class="btn btn-primary">Next</button>
                                                     </form></td>
 													<td><center>
-														<a class="btn btn-xs btn-info" data-toggle="modal" role="button" data-target="#info"> <i class="fa fa-eye"></i> </a> &nbsp; &nbsp; 
-														<a class="btn btn-xs btn-danger" onclick="return confirm('Do you really want to delete this enquiry !!')" href=""> <i class="fa fa-trash-o"></i> </a>
+														<a class="btn btn-sm btn-danger" onclick="return confirm('Do you really want to delete this task !!')" href="{{url_for('tasks.delete_task',tid=task.id)}}"> <i class="fa fa-trash-o"></i> </a>
 													</center></td>
                                                 </tr>
                                                 {% endfor %}
@@ -58,6 +58,33 @@
 						</div>
                 </div>
             </div>
+
+            	<div class="modal fade" id="add_task" tabindex="-1" role="basic" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+							<form class="" role="form" method="post" autocomplete="off" action="{{url_for('tasks.add_tasks')}}">
+                                <div class="modal-header">
+									<button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
+                                    <h4 class="modal-title"><strong>Tasks</strong></h4>
+                                </div>
+                                <div class="modal-body">
+									<div class="form-body">
+										<div class="box-body"> 
+										<div class="form-group">
+											<label>Task Name</label>
+											<input type="text" name="title" class="form-control" required placeholder="New Task">
+										</div>
+										</div>									
+									</div>
+								</div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-primary" data-dismiss="modal" style="float:left"> Close </button>
+                                    <button type="submit" class="btn btn-success"> Add Task </button>
+                                </div>
+							</form>
+                            </div>
+                        </div>
+                    </div>
 <!-- 
 <div class="task-box">
     <h2>Your Tasks</h2>

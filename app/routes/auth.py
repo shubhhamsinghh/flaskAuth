@@ -20,7 +20,7 @@ def login():
         if user and check_password_hash(user.password, password):
             login_user(user)
             flash('Login Successfully','success')
-            return redirect(url_for('tasks.view_tasks'))
+            return redirect(url_for('tasks.dashboard'))
         else:
             flash('Invalid username or password','danger')
     return render_template('login.html')
@@ -47,7 +47,7 @@ def register():
             db.session.add(user)
             db.session.commit()
             flash('Registered successfully. Please login.','success')
-            return redirect(url_for('auth.login'))
+            return redirect(url_for('tasks.dashboard'))
     
     return render_template('register.html')
 

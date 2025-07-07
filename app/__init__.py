@@ -2,12 +2,12 @@ from flask import Flask, redirect, url_for
 from flask_sqlalchemy import SQLAlchemy
 from datetime import datetime
 from flask_login import LoginManager
-
+from flask_migrate import Migrate
 
 
 #create DB object globally
-db = SQLAlchemy()
-
+db = SQLAlchemy() # database object
+migrate = Migrate() # migration engine
 
 def create_app():
     app = Flask(__name__)
@@ -16,7 +16,8 @@ def create_app():
     app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///flaskAuth.db'
     app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
-    db.init_app(app)
+    db.init_app(app)  # connect DB to app
+    migrate.init_app(app, db)  # connect Migrate to app and DB
 
     from app.routes.auth import auth_bp
     from app.routes.tasks import tasks_bp

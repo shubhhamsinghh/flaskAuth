@@ -1,0 +1,38 @@
+{% extends 'admin/admin_layout.html' %}
+{% block title %} Dashboard {% endblock %}
+{% block content%}
+
+ <div class="page-content-wrapper">
+                <div class="page-content">
+                    <h1 class="page-title bold"> Dashboard </h1>
+					<div class="row">
+					    
+					        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                            <a class="dashboard-stat dashboard-stat-v2 blue" style="box-shadow: 4px 4px 4px grey;" href="">
+                                <div class="visual">
+                                    <i class="fa fa-tasks"></i>
+                                </div>
+                                <div class="details">
+                                    <div class="number"><span>{{tasks}}</span></div>
+                                    <div class="desc"> Tasks </div>
+                                </div>
+                            </a>
+							</div>
+						
+							<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                            <a class="dashboard-stat dashboard-stat-v2 yellow" style="box-shadow: 4px 4px 4px grey;" href="">
+                                <div class="visual">
+                                    <i class="fa fa-users"></i>
+                                </div>
+                                <div class="details">
+                                    <div class="number"><span>{{users}}</span></div>
+                                    <div class="desc"> Users </div>
+                                </div>
+                            </a>				
+                            </div>
+                        
+					</div>
+                </div>
+            </div>
+
+{% endblock %}
