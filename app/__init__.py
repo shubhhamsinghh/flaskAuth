@@ -3,6 +3,7 @@ from flask_sqlalchemy import SQLAlchemy
 from datetime import datetime
 from flask_login import LoginManager
 from flask_migrate import Migrate
+from flask_wtf.csrf import CSRFProtect
 
 
 #create DB object globally
@@ -18,6 +19,7 @@ def create_app():
 
     db.init_app(app)  # connect DB to app
     migrate.init_app(app, db)  # connect Migrate to app and DB
+    csrf = CSRFProtect(app)
 
     from app.routes.auth import auth_bp
     from app.routes.tasks import tasks_bp

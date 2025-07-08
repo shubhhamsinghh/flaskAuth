@@ -2,6 +2,7 @@ from flask import Blueprint, render_template, request, redirect, url_for, flash,
 from app import db
 from app.models import Task, User
 from flask_login import login_required, current_user
+from sqlalchemy import desc
 
 tasks_bp = Blueprint('tasks', __name__)
 
@@ -15,8 +16,9 @@ def dashboard():
 @tasks_bp.route('/tasks')
 @login_required
 def view_tasks():
-    tasks = Task.query.filter_by(user_id=current_user.id).all()
+    tasks = Task.query.filter_by(user_id=current_user.id).order_by(desc('id')).all()
     return render_template('tasks.html',tasks=tasks)
+
 
 @tasks_bp.route('/add',methods=["POST"])
 @login_required

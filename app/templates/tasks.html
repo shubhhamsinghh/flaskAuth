@@ -63,6 +63,7 @@
                         <div class="modal-dialog">
                             <div class="modal-content">
 							<form class="" role="form" method="post" autocomplete="off" action="{{url_for('tasks.add_tasks')}}">
+                                <input type="hidden" name="csrf_token" value="{{csrf_token()}}">
                                 <div class="modal-header">
 									<button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
                                     <h4 class="modal-title"><strong>Tasks</strong></h4>

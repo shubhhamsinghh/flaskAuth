@@ -3,13 +3,14 @@ from flask_login import login_required, current_user
 from app.models import User
 from app import db
 from werkzeug.security import generate_password_hash
+from sqlalchemy import desc
 
 users_bp = Blueprint('users',__name__)
 
 @users_bp.route('/users')
 @login_required
 def users():
-    users = User.query.all()
+    users = User.query.order_by(desc('id')).all()
     return render_template('users.html',users=users)
 
 @users_bp.route('/users/users-update/<int:userId>',methods=['GET'])
