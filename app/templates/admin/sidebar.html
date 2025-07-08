@@ -19,13 +19,15 @@
                     <span class="title bold">Tasks</span>
                 </a>
             </li>
-          
+            
+            {% if current_user.is_admin == 1 %}
             <li class="nav-item">
-                <a href="">
+                <a href="{{ url_for('users.users') }}">
                     <i class="fa fa-users"></i>
                     <span class="title bold">Users</span>
                 </a>
-            </li>    
+            </li>  
+            {% endif %}  
         </ul>
     </div>
 </div>

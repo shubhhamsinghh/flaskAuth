@@ -1,0 +1,101 @@
+{% extends 'admin/admin_layout.html' %}
+{% block title %} Users List {% endblock %}
+{% block content%}
+
+ <div class="page-content-wrapper">
+                <div class="page-content">
+                    <h1 class="page-title bold">Tasks</h1>
+						<div class="row">
+							<div class="col-md-12">
+                                <div class="portlet light bordered">
+                                    <div class="portlet-title">
+                                        <div class="caption">
+                                            <span class="caption-subject font-red bold">Users</span>
+                                        </div>
+                                        <div class="actions">
+                                            <div class="btn-group">
+                                                <!-- <a class="btn btn-primary float-right" data-toggle="modal" role="button" data-target="#add_task"><i class="fa fa-plus"></i> Add Task</a> -->
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="portlet-body">
+                                        <table id="example" class="display cell-border" cellspacing="0" width="100%">
+                                            <thead>
+                                                <tr>
+													<th width="30">#</th>
+													<th>Name</th>
+													<th>Email</th>
+													<th>Status</th>
+                                                    <th>Is Admin</th>
+													<th width="70"><center>Change</center></th>
+												</tr>
+                                            </thead>
+                                            <tbody>
+												{% for user in users %}
+                                                <tr class="odd gradeX">
+													<td>{{loop.index}}</td>
+													<td>{{user.name}}</td>
+													<td>{{user.email}}</td>
+                                                    <td>
+                                                        <label class="switch">
+                                                        <input type="checkbox" onchange="updateStatus('{{user.id}}')" {% if user.status == 1 %} checked {% endif %}>
+                                                        <span class="toggleswitch flat"></span></label>
+                                                    </td>
+                                                    <td>
+                                                        <label class="switch">
+                                                        <input type="checkbox" onchange="isAdmin('{{user.id}}')" id="" {% if user.is_admin == 1 %} checked {% endif %}>
+                                                        <span class="toggleswitch flat"></span></label>
+                                                    </td>
+													<td><center>
+														<a class="btn btn-sm btn-danger" onclick="return confirm('Do you really want to delete this task !!')" href=""> <i class="fa fa-trash-o"></i> </a>
+													</center></td>
+                                                </tr>
+                                                {% endfor %}
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+						</div>
+                </div>
+            </div>
+
+{% endblock %}
+
+{% block script %}
+<script>
+    function updateStatus(userId){
+       $.ajax({
+        url : '/users/users-update/'+userId,
+        method: "GET",
+        success: function(result){
+           if(result.success){
+            toastr.success(result.message);
+           }else{
+            toastr.error(result.message);
+           }
+        },
+        error: function(e){
+            console.error(e)
+        }
+       })
+    }
+    function isAdmin(userId){
+       $.ajax({
+        url : '/users/is-admin/'+userId,
+        method: "GET",
+        success: function(result){
+           if(result.success){
+            toastr.success(result.message);
+           }else{
+            toastr.error(result.message);
+           }
+        },
+        error: function(e){
+            console.error(e)
+        }
+       })
+    }
+</script>
+
+{% endblock %}
