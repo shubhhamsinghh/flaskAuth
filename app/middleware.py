@@ -11,5 +11,3 @@ def guest(view_func):
             return redirect(url_for('tasks.dashboard'))
         return view_func(*args, **kwargs)
     return decorated
-
-

@@ -4,7 +4,7 @@
 
  <div class="page-content-wrapper">
                 <div class="page-content">
-                    <h1 class="page-title bold">Tasks</h1>
+                    <h1 class="page-title bold">Users</h1>
 						<div class="row">
 							<div class="col-md-12">
                                 <div class="portlet light bordered">
@@ -27,7 +27,7 @@
 													<th>Email</th>
 													<th>Status</th>
                                                     <th>Is Admin</th>
-													<th width="70"><center>Change</center></th>
+													<th width="70"><center>Action</center></th>
 												</tr>
                                             </thead>
                                             <tbody>
@@ -47,7 +47,7 @@
                                                         <span class="toggleswitch flat"></span></label>
                                                     </td>
 													<td><center>
-														<a class="btn btn-sm btn-danger" onclick="return confirm('Do you really want to delete this task !!')" href=""> <i class="fa fa-trash-o"></i> </a>
+														<a class="btn btn-sm btn-primary" title="Profile Image"> <i class="fa fa-upload" aria-hidden="true"></i> </a>
 													</center></td>
                                                 </tr>
                                                 {% endfor %}
@@ -59,7 +59,6 @@
 						</div>
                 </div>
             </div>
-
 {% endblock %}
 
 {% block script %}

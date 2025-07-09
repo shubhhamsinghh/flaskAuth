@@ -7,6 +7,7 @@ class User(db.Model, UserMixin):
     email = db.Column(db.String(100), unique=True, nullable=False)
     password = db.Column(db.String(200), nullable=False)
     is_admin = db.Column(db.SmallInteger, nullable=False, default=0)
+    profile_img = db.Column(db.String(100), nullable=True)
     status = db.Column(db.SmallInteger, nullable=False, default=0)
 
     tasks = db.relationship('Task', backref='user', lazy=True)
