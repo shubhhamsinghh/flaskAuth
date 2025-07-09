@@ -32,9 +32,10 @@ def add_tasks():
 
    return redirect(url_for('tasks.view_tasks'))
 
-@tasks_bp.route('/toggle/<int:task_id>',methods=['POST'])
+@tasks_bp.route('/toggle',methods=['POST'])
 @login_required
-def toggle_status(task_id):
+def toggle_status():
+    task_id = request.form.get('task_id')
     task = Task.query.get(task_id)
     if task:
         if task.status == "Pending":
