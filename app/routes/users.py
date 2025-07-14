@@ -4,6 +4,10 @@ from app.models import User
 from app import db
 from werkzeug.security import generate_password_hash
 from sqlalchemy import desc
+import os
+from werkzeug.utils import secure_filename
+import uuid
+from app import create_app
 
 users_bp = Blueprint('users',__name__)
 
@@ -56,6 +60,25 @@ def change_password():
 @login_required
 def profile_update():
     if request.method == 'POST':
+        user = User.query.get_or_404(current_user.id)
         name = request.form.get('name')
-        image = request.form.get('name')
+        image = request.files['profile_image']
+        
+        if image:
+            upload_folder = create_app.config['UPLOAD_FOLDER']
+            ext = os.path.splitext(image.filename)[1]
+            filename = secure_filename(f"{uuid.uuid4().hex}{ext}")
+            up_path = os.path.join(upload_folder,filename)
+    
+            if user.profile_img:
+                old_path = os.path.join(upload_folder,user.profile_img)
+                print(old_path)
+                if os.path.exists(old_path):
+                    os.remove(old_path)
+            image.save(up_path)
+            user.profile_img = filename
+            
+        user.name = name
+        db.session.commit()
+        flash('Profile updated successfully!','success')
     return render_template('profile.html')

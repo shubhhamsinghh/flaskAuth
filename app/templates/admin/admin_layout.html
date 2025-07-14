@@ -44,7 +44,7 @@
 
         <script>
         $(document).ready(function(){
-        $(".show_panel").delay(3000).fadeOut(1000);
+            $(".show_panel").delay(3000).fadeOut(1000);
         });
         </script>
         <script>
@@ -97,7 +97,7 @@
                                 {% if current_user.is_authenticated %}
                                 <ul class="dropdown-menu dropdown-menu-default">
                                      <li class="">
-                                        <a href="">
+                                        <a href="{{ url_for('users.profile_update') }}">
                                             <i class="fa fa-user"></i> Profile </a>
                                     </li>
                                     <li class="divider"> </li>

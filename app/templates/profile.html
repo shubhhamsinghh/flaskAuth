@@ -38,6 +38,7 @@
                                             <i class="fa fa-upload font-blue"></i>
                                         </span>
                                         <input type="file" class="form-control" name="profile_image" />
+                                        <img  style="height: 100px; width: 100px;" src="{{ url_for('static', filename='profile/' ~ current_user.profile_img) }}">
                                     </div>
                                 </div>
                             </div>

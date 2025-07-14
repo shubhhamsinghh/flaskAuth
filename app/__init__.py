@@ -4,11 +4,12 @@ from datetime import datetime
 from flask_login import LoginManager
 from flask_migrate import Migrate
 from flask_wtf.csrf import CSRFProtect
-
+import os
 
 #create DB object globally
 db = SQLAlchemy() # database object
 migrate = Migrate() # migration engine
+
 
 def create_app():
     app = Flask(__name__)
@@ -16,6 +17,7 @@ def create_app():
     app.config['ENV'] = 'development' 
     app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///flaskAuth.db'
     app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
+    app.config['UPLOAD_FOLDER'] = os.path.join(app.root_path, 'static', 'profile')
 
     db.init_app(app)  # connect DB to app
     migrate.init_app(app, db)  # connect Migrate to app and DB
