@@ -7,13 +7,13 @@
                     <span></span>
                 </div>
             </li>
-            <li class="nav-item">
+            <li class="nav-item {% if request.path == url_for('tasks.dashboard') %} active {% endif %}">
                 <a href="{{url_for('tasks.dashboard')}}">
                     <i class="fa fa-dashboard"></i>
                     <span class="title bold">Dashboard</span>
                 </a>
             </li>
-            <li class="nav-item">
+            <li class="nav-item {% if request.path == url_for('tasks.view_tasks') %} active {% endif %}">
                 <a href="{{ url_for('tasks.view_tasks') }}">
                     <i class="fa fa-tasks"></i>
                     <span class="title bold">Tasks</span>
@@ -21,7 +21,7 @@
             </li>
             
             {% if current_user.is_admin == 1 %}
-            <li class="nav-item">
+            <li class="nav-item {% if request.path == url_for('users.users') %} active {% endif %}">
                 <a href="{{ url_for('users.users') }}">
                     <i class="fa fa-users"></i>
                     <span class="title bold">Users</span>
