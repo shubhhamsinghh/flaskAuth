@@ -65,14 +65,13 @@ def profile_update():
         image = request.files['profile_image']
         
         if image:
-            upload_folder = create_app.config['UPLOAD_FOLDER']
+            upload_folder = create_app().config['UPLOAD_FOLDER']
             ext = os.path.splitext(image.filename)[1]
             filename = secure_filename(f"{uuid.uuid4().hex}{ext}")
             up_path = os.path.join(upload_folder,filename)
     
             if user.profile_img:
                 old_path = os.path.join(upload_folder,user.profile_img)
-                print(old_path)
                 if os.path.exists(old_path):
                     os.remove(old_path)
             image.save(up_path)
