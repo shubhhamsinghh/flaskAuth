@@ -27,7 +27,7 @@
 													<th>Email</th>
 													<th>Status</th>
                                                     <th>Is Admin</th>
-													<th width="70"><center>Action</center></th>
+													
 												</tr>
                                             </thead>
                                             <tbody>
@@ -46,9 +46,7 @@
                                                         <input type="checkbox" onchange="isAdmin('{{user.id}}')" id="" {% if user.is_admin == 1 %} checked {% endif %}>
                                                         <span class="toggleswitch flat"></span></label>
                                                     </td>
-													<td><center>
-														<a class="btn btn-sm btn-primary" title="Profile Image"> <i class="fa fa-upload" aria-hidden="true"></i> </a>
-													</center></td>
+													
                                                 </tr>
                                                 {% endfor %}
                                             </tbody>
