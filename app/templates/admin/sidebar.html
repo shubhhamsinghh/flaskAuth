@@ -8,13 +8,13 @@
                 </div>
             </li>
             <li class="nav-item {% if request.path == url_for('tasks.dashboard') %} active {% endif %}">
-                <a href="{{url_for('tasks.dashboard')}}">
+                <a href="{{url_for('tasks.dashboard')}}" title="Dashboard">
                     <i class="fa fa-dashboard"></i>
                     <span class="title bold">Dashboard</span>
                 </a>
             </li>
             <li class="nav-item {% if request.path == url_for('tasks.view_tasks') %} active {% endif %}">
-                <a href="{{ url_for('tasks.view_tasks') }}">
+                <a href="{{ url_for('tasks.view_tasks') }}" title="Tasks">
                     <i class="fa fa-tasks"></i>
                     <span class="title bold">Tasks</span>
                 </a>
@@ -22,7 +22,7 @@
             
             {% if current_user.is_admin == 1 %}
             <li class="nav-item {% if request.path == url_for('users.users') %} active {% endif %}">
-                <a href="{{ url_for('users.users') }}">
+                <a href="{{ url_for('users.users') }}" title="Users">
                     <i class="fa fa-users"></i>
                     <span class="title bold">Users</span>
                 </a>

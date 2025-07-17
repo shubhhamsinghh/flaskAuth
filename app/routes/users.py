@@ -38,7 +38,8 @@ def is_admin(userId):
         return jsonify({'success': True, 'message': 'User privilege updated!'})
     else:
         return jsonify({'success': False, 'message': 'Access denied!'})
-    
+
+ 
 @users_bp.route('/change-password',methods=['GET','POST'])
 @login_required
 def change_password():
@@ -55,7 +56,8 @@ def change_password():
             return redirect(url_for('users.change_password'))
     else:
         return render_template('change-password.html')
-    
+
+
 @users_bp.route('/profile-update',methods=['GET','POST'])
 @login_required
 def profile_update():
