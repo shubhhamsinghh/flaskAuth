@@ -18,6 +18,11 @@ def create_app():
     app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///flaskAuth.db'
     app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
     app.config['UPLOAD_FOLDER'] = os.path.join(app.root_path, 'static', 'profile')
+    app.config['MAIL_SERVER'] = 'smtp.gmail.com'
+    app.config['MAIL_PORT'] = 587
+    app.config['MAIL_USE_TLS'] = True
+    app.config['MAIL_USERNAME'] = 'shubhamproject09882@gmail.com'
+    app.config['MIL_PASSWORD'] = 'vxfx tdaz uhbh bsbb'
 
     db.init_app(app)  # connect DB to app
     migrate.init_app(app, db)  # connect Migrate to app and DB

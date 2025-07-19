@@ -4,7 +4,8 @@ from app.models import User
 from werkzeug.security import generate_password_hash, check_password_hash
 from app import db
 from flask_login import login_user, login_required, logout_user
-
+from flask_mail import Mail, Message
+from app import create_app
 
 auth_bp = Blueprint('auth',__name__)
 
@@ -28,6 +29,7 @@ def login():
     return render_template('login.html')
 
 
+
 @auth_bp.route('/register',methods=["GET","POST"])
 @guest
 def register():
@@ -48,6 +50,7 @@ def register():
             user = User(name=name, email=email, password=hashed_password) 
             db.session.add(user)
             db.session.commit()
+
             flash('Registered successfully. Please login.','success')
             return redirect(url_for('tasks.dashboard'))
     
