@@ -5,7 +5,7 @@ from flask_login import LoginManager
 from flask_migrate import Migrate
 from flask_wtf.csrf import CSRFProtect
 import os
-from flask_mail import Mail
+from .extensions import mail
 
 #create DB object globally
 db = SQLAlchemy() # database object
@@ -23,12 +23,12 @@ def create_app():
     app.config['MAIL_PORT'] = 587
     app.config['MAIL_USE_TLS'] = True
     app.config['MAIL_USERNAME'] = 'shubhamproject09882@gmail.com'
-    app.config['MIL_PASSWORD'] = 'vxfx tdaz uhbh bsbb'
+    app.config['MAIL_PASSWORD'] = 'vxfx tdaz uhbh bsbb'
 
     db.init_app(app)  # connect DB to app
     migrate.init_app(app, db)  # connect Migrate to app and DB
     csrf = CSRFProtect(app)
-    mail = Mail(app)
+    mail.init_app(app)
 
     from app.routes.auth import auth_bp
     from app.routes.tasks import tasks_bp

@@ -4,8 +4,9 @@ from app.models import User
 from werkzeug.security import generate_password_hash, check_password_hash
 from app import db
 from flask_login import login_user, login_required, logout_user
-from flask_mail import Mail, Message
+from flask_mail import Message
 from app import create_app
+from app.extensions import mail
 
 auth_bp = Blueprint('auth',__name__)
 
@@ -32,12 +33,12 @@ def login():
 def send_email():
 
     to_email = 'shivamsingh09882@gmail.com'
-    body = 'THis is mail body'
+    body = 'This is mail body'
 
-    msg = Message("Hello from Flask",sender=create_app().config['MAIL_USERNAME'], recipients=[to_email])
+    msg = Message("Hello from Flask",sender=('flaskAuth',create_app().config['MAIL_USERNAME']), recipients=[to_email])
     msg.body = body
 
-    Mail.send(msg)
+    mail.send(msg)
     flash('Email sent successfully!', 'success')
     return redirect('/')
 
