@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            padding: 20px;
+        }
+        .email-container {
+            background: #ffffff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.05);
+            max-width: 600px;
+            margin: auto;
+        }
+        h2 {
+            color: #2c3e50;
+        }
+        p {
+            color: #555;
+            line-height: 1.6;
+        }
+        .footer {
+            margin-top: 30px;
+            font-size: 0.9em;
+            color: #999;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="email-container">
+        <h2>Welcome to FlaskAuth, {{ name }}! 🎉</h2>
+        <p>Thank you for registering with our application. Your account has been created successfully.</p>
+
+        <p>You can now log in using your credentials and start exploring our features.</p>
+
+        <p>If you didn't sign up for this account, please ignore this email or contact support.</p>
+
+        <p>— The FlaskAuth Team</p>
+
+        <div class="footer">
+            FlaskAuth &bull; {{ current_year }}<br>
+            This is an automated message, please do not reply.
+        </div>
+    </div>
+</body>
+</html>

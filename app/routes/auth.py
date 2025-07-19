@@ -10,7 +10,6 @@ from app.extensions import mail
 
 auth_bp = Blueprint('auth',__name__)
 
-
 @auth_bp.route('/login', methods=["GET","POST"])
 @guest
 def login():
@@ -18,31 +17,22 @@ def login():
         email = request.form.get('email')
         password = request.form.get('password')
         user = User.query.filter_by(email=email).first()
-        if user.status == 1:
-            if user and check_password_hash(user.password, password):
-                login_user(user)
-                flash('Login Successfully','success')
-                return redirect(url_for('tasks.dashboard'))
-            else:
-                flash('Invalid username or password','danger')
+        if user is None:
+            flash('User not found','danger')
         else:
-            flash('Access denied: User account is disabled!','danger')
+            if user and user.status == 1:
+                if user and check_password_hash(user.password, password):
+                    login_user(user)
+                    flash('Login Successfully','success')
+                    return redirect(url_for('tasks.dashboard'))
+                else:
+                    flash('Invalid username or password','danger')
+            else:
+                flash('Access denied: User account is disabled!','danger')
     return render_template('login.html')
 
-@auth_bp.route('/send', methods=['GET'])
-def send_email():
 
-    to_email = 'shivamsingh09882@gmail.com'
-    body = 'This is mail body'
-
-    msg = Message("Hello from Flask",sender=('flaskAuth',create_app().config['MAIL_USERNAME']), recipients=[to_email])
-    msg.body = body
-
-    mail.send(msg)
-    flash('Email sent successfully!', 'success')
-    return redirect('/')
-
-@auth_bp.route('/register',methods=["GET","POST"])
+@auth_bp.route('/register', methods=["GET","POST"])
 @guest
 def register():
     if request.method == "POST":
@@ -62,7 +52,9 @@ def register():
             user = User(name=name, email=email, password=hashed_password) 
             db.session.add(user)
             db.session.commit()
-
+            html_tem = render_template('mail.html',name=name)
+            msg = Message('Register to FlaskAuth',sender=('FlaskAuth',create_app().config['MAIL_USERNAME']),recipients=[email],html=html_tem)
+            mail.send(msg)
             flash('Registered successfully. Please login.','success')
             return redirect(url_for('tasks.dashboard'))
     
