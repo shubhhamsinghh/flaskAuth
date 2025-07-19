@@ -28,7 +28,18 @@ def login():
             flash('Access denied: User account is disabled!','danger')
     return render_template('login.html')
 
+@auth_bp.route('/send', methods=['GET'])
+def send_email():
 
+    to_email = 'shivamsingh09882@gmail.com'
+    body = 'THis is mail body'
+
+    msg = Message("Hello from Flask",sender=create_app().config['MAIL_USERNAME'], recipients=[to_email])
+    msg.body = body
+
+    Mail.send(msg)
+    flash('Email sent successfully!', 'success')
+    return redirect('/')
 
 @auth_bp.route('/register',methods=["GET","POST"])
 @guest
