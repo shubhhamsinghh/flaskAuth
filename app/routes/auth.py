@@ -52,10 +52,14 @@ def register():
             user = User(name=name, email=email, password=hashed_password) 
             db.session.add(user)
             db.session.commit()
-            html_tem = render_template('mail.html',name=name)
-            msg = Message('Register to FlaskAuth',sender=('FlaskAuth',create_app().config['MAIL_USERNAME']),recipients=[email],html=html_tem)
-            mail.send(msg)
-            flash('Registered successfully. Please login.','success')
+            try:
+                html_tem = render_template('mail.html',name=name)
+                msg = Message('Register to FlaskAuth',sender=('FlaskAuth',create_app().config['MAIL_USERNAME']),recipients=[email],html=html_tem)
+                mail.send(msg)
+            except Exception as e:
+                flash('Error in mail sent.','error')
+            finally:
+                flash('Registered successfully. Please login.','success')
             return redirect(url_for('tasks.dashboard'))
     
     return render_template('register.html')
