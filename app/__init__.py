@@ -23,7 +23,7 @@ def create_app():
     app.config['MAIL_PORT'] = 587
     app.config['MAIL_USE_TLS'] = True
     app.config['MAIL_USERNAME'] = 'shubhamproject09882@gmail.com'
-    app.config['MAIL_PASSWORD'] = '************'
+    app.config['MAIL_PASSWORD'] = '*************'
 
     db.init_app(app)  # connect DB to app
     migrate.init_app(app, db)  # connect Migrate to app and DB
