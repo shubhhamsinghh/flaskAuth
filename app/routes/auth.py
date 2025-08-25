@@ -17,18 +17,18 @@ def login():
         email = request.form.get('email')
         password = request.form.get('password')
         user = User.query.filter_by(email=email).first()
-        if user is None:
-            flash('User not found','danger')
+        
+        if not user:
+            flash('User not found', 'danger')
+        elif user.status != 1:
+            flash('Access denied: User account is disabled!', 'danger')
+        elif not check_password_hash(user.password, password):
+            flash('Invalid username or password', 'danger')
         else:
-            if user and user.status == 1:
-                if user and check_password_hash(user.password, password):
-                    login_user(user)
-                    flash('Login Successfully','success')
-                    return redirect(url_for('tasks.dashboard'))
-                else:
-                    flash('Invalid username or password','danger')
-            else:
-                flash('Access denied: User account is disabled!','danger')
+            login_user(user)
+            flash('Login Successfully', 'success')
+            return redirect(url_for('tasks.dashboard'))
+    
     return render_template('login.html')
 
 
